@@ -48,7 +48,8 @@
 	" Given a file suffix, this function will source a file from either the
 	" user-defined layers or vigor's core layers.
 	function! SourceLayerFile(layerName, suffix)
-		let s:script_path = g:vigor_home . "/layers/" . a:layerName . "/" . a:layerName . a:suffix
+
+		let s:script_path = g:vigor_home . "/layers/" . a:layerName . "/" . a:layerName . '.' . a:suffix . '.vim'
 		let s:user_layer_path = g:vigor_userdir . "/layers/" . a:layerName
 		let s:userscript_path = s:user_layer_path . "/" . a:layerName . "." . a:suffix . ".vim"
 
@@ -56,10 +57,10 @@
 		" look at Vigor's copy of the layer *at all*.
 		if isdirectory(s:user_layer_path)
 			if filereadable(s:userscript_path)
-				source s:userscript_path
+				execute 'source ' . s:userscript_path
 			endif
 		elseif filereadable(s:script_path)
-			source s:script_path
+			execute 'source ' . s:script_path
 		endif
 	endfunction
 
