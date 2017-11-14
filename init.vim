@@ -44,7 +44,9 @@
 
 	" Install missing plugins on startup.
 	if !empty(filter(copy(g:plugs), '!isdirectory(v:val.dir)'))
+		echo "Installing missing plugins. Please wait..."
 		PlugInstall | q
+		echo "Done!"
 	endif
 " }}}
 
