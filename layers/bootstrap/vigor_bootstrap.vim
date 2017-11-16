@@ -67,7 +67,7 @@
 	" Given a name, source ~/.vigor/name.vim
 	function! SourceUserFile(name)
 		if filereadable(g:vigor_userdir . "/" . a:name . ".vim")
-			source g:vigor_userdir . "/" . a:name . ".vim"
+			execute 'source ' . g:vigor_userdir . '/' . a:name . '.vim'
 		endif
 	endfunction
 " }}}
