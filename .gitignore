@@ -1,2 +1,4 @@
 autoload
 plugins
+layers/
+!layers/bootstrap/
