@@ -14,3 +14,13 @@ in this repository will be the basic framework for loading layers.
 
 The core Vigor framework does *not* prescribe any particular way of doing things.
 In fact, Vigor doesn't do anything *at all* unless a user tells it to.
+
+## Installing
+
+```
+[ -d ~/.config/nvim ] || git clone https://github.com/vim-vigor/vigor.git ~/.config/nvim                                        
+for p in language-prose vigor-ui linting git language-go language-vim completion defaults; do                               
+        echo " ---> Ensuring that the ${p} layer is installed."                                                             
+        [ -d ~/.config/nvim/layers/${p} ] || git clone https://github.com/vim-vigor/${p}.git ~/.config/nvim/layers/${p}         
+done  
+```
