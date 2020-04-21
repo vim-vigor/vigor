@@ -9,9 +9,6 @@ it will provide a solid foundation for the community to build layers on top of
 that will work for everyone, as well as codify the "best practices" in the vim
 community.
 
-This repository will include other layers as submodules, but the only actual code
-in this repository will be the basic framework for loading layers.
-
 The core Vigor framework does *not* prescribe any particular way of doing things.
 In fact, Vigor doesn't do anything *at all* unless a user tells it to.
 
